@@ -1,0 +1,2205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--favicon-->
+  <link rel="icon" href="" type="image/png" />
+  <!--plugins-->
+  <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+  <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+  <!-- loader-->
+  <link href="assets/css/pace.min.css" rel="stylesheet" />
+  <script src="assets/js/pace.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="assets/css/app.css" rel="stylesheet">
+  <link href="assets/css/icons.css" rel="stylesheet">
+  <!-- Theme Style CSS -->
+	<link rel="stylesheet" href="assets/css/dark-theme.css" />
+
+	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<link rel="stylesheet" href="assets/css/semi-dark.css" />
+
+  <title>Admin</title>
+</head>
+
+<body>
+  <!--wrapper-->
+  <div class="wrapper">
+    <!--sidebar wrapper -->
+    <div class="sidebar-wrapper " data-simplebar="true">
+      <div class="sidebar-header">
+        <div>
+          <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+        </div>
+        <div>
+          <h4 class="logo-text">Adeeva</h4>
+        </div>
+        <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+        </div>
+      </div>
+      <!--navigation-->
+      <ul class="metismenu" id="menu">
+        <li>
+          <a href="index.html" class="">
+            <div class="parent-icon"><i class='bx bx-home-circle'></i>
+            </div>
+            <div class="menu-title">Dashboard</div>
+          </a>
+        </li>
+        <li>
+          <a href="centers.html" class="">
+            <div class="parent-icon"><i class='bx bxs-cabinet'></i>
+            </div>
+            <div class="menu-title">Centers</div>
+          </a>
+        </li>
+        <li>
+          <a href="ecommerce-orders.html" class="">
+            <div class="parent-icon"><i class='bx bx-trip'></i>
+            </div>
+            <div class="menu-title">Orders</div>
+          </a>
+        </li>
+        <li>
+          <a href="ecommerce-riders.html" class="">
+            <div class="parent-icon"><i class='bx bx-cycling'></i>
+            </div>
+            <div class="menu-title">Riders</div>
+          </a>
+        </li>
+        <li>
+          <a href="ecommerce-vehicles.html" class="">
+            <div class="parent-icon"><i class='bx bxs-bus'></i>
+            </div>
+            <div class="menu-title">Vehicles</div>
+          </a>
+        </li>
+        <li>
+          <a href="customer.html" class="">
+            <div class="parent-icon"><i class='bx bx-male'></i>
+            </div>
+            <div class="menu-title">Customers</div>
+          </a>
+        </li>
+        <li>
+          <a href="user-profile.html" class="">
+            <div class="parent-icon"><i class='bx bxs-user'></i>
+            </div>
+            <div class="menu-title">User</div>
+          </a>
+        </li>
+
+
+      </ul>
+      <!--end navigation-->
+    </div>
+    <!--end sidebar wrapper -->
+    <!--start header -->
+    <header>
+      <div class="topbar d-flex align-items-center">
+        <nav class="navbar navbar-expand">
+          <div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+          </div>
+          <div class="search-bar flex-grow-1">
+            <div class="position-relative search-bar-box">
+              <input type="text" class="form-control search-control" placeholder="Type to search..."> <span class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span>
+              <span class="position-absolute top-50 search-close translate-middle-y"><i class='bx bx-x'></i></span>
+            </div>
+          </div>
+          <div class="top-menu ms-auto">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item dropdown dropdown-large">
+                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">7</span>
+                  <i class='bx bx-bell'></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a href="javascript:;">
+                    <div class="msg-header">
+                      <p class="msg-header-title">Notifications</p>
+                      <p class="msg-header-clear ms-auto">Marks all as read</p>
+                    </div>
+                  </a>
+                  <div class="header-notifications-list">
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
+                              ago</span></h6>
+                          <p class="msg-info">5 new user registered</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="notify bg-light-danger text-danger"><i class="bx bx-cart-alt"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
+                              ago</span></h6>
+                          <p class="msg-info">You have recived new orders</p>
+                        </div>
+                      </div>
+                    </a>
+
+
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="msg-name">New Product Approved <span class="msg-time float-end">2 hrs ago</span></h6>
+                          <p class="msg-info">Your new product has approved</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
+                              ago</span></h6>
+                          <p class="msg-info">New customer comments recived</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="notify bg-light-success text-success"><i class='bx bx-check-square'></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
+                              ago</span></h6>
+                          <p class="msg-info">Successfully shipped your item</p>
+                        </div>
+                      </div>
+                    </a>
+
+
+                  </div>
+                  <a href="javascript:;">
+                    <div class="text-center msg-footer">View All Notifications</div>
+                  </a>
+                </div>
+              </li>
+              <div class="header-message-list">
+            </ul>
+          </div>
+
+
+          <div class="user-box dropdown">
+            <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/images/avatars/avatar-26.png" class="user-img" alt="user avatar">
+              <div class="user-info ps-3">
+                <p class="user-name mb-0">Sam Tobichukwu</p>
+                <p class="designattion mb-0">Operations Manager</p>
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+              </li>
+              <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+              </li>
+              <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
+              </li>
+              <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-dollar-circle'></i><span>Earnings</span></a>
+              </li>
+              <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-download'></i><span>Downloads</span></a>
+              </li>
+              <li>
+                <div class="dropdown-divider mb-0"></div>
+              </li>
+              <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+
+
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					<div class="search-bar flex-grow-1">
+						<div class="position-relative search-bar-box">
+							<input type="text" class="form-control search-control" placeholder="Type to search..."> <span class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span>
+							<span class="position-absolute top-50 search-close translate-middle-y"><i class='bx bx-x'></i></span>
+						</div>
+					</div>
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">7</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-clear ms-auto">Marks all as read</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
+															ago</span></h6>
+													<p class="msg-info">5 new user registered</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-danger text-danger"><i class="bx bx-cart-alt"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
+															ago</span></h6>
+													<p class="msg-info">You have recived new orders</p>
+												</div>
+											</div>
+										</a>
+
+
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Product Approved <span class="msg-time float-end">2 hrs ago</span></h6>
+													<p class="msg-info">Your new product has approved</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
+															ago</span></h6>
+													<p class="msg-info">New customer comments recived</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-success text-success"><i class='bx bx-check-square'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
+															ago</span></h6>
+													<p class="msg-info">Successfully shipped your item</p>
+												</div>
+											</div>
+										</a>
+
+
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">View All Notifications</div>
+									</a>
+								</div>
+							</li>
+							<div class="header-message-list">
+						</ul>
+					</div>
+
+
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/avatar-26.png" class="user-img" alt="user avatar">
+							<div class="user-info ps-3">
+								<p class="user-name mb-0">Sam Tobichukwu</p>
+								<p class="designattion mb-0">Operations Manager</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-dollar-circle'></i><span>Earnings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-download'></i><span>Downloads</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+    <div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="centers.html"><i class='bx bxs-cabinet'></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Center Name</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="ms-auto">
+            <div class="btn-group">
+              <button type="button" class="btn btn-dark">Settings</button>
+              <button type="button" class="btn btn-dark split-bg-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end">	<a class="dropdown-item" href="javascript:;">Action</a>
+                <a class="dropdown-item" href="javascript:;">Another action</a>
+                <a class="dropdown-item" href="javascript:;">Something else here</a>
+                <div class="dropdown-divider"></div>	<a class="dropdown-item" href="javascript:;">Separated link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end breadcrumb-->
+
+        <div class="card">
+          <div class="card-body">
+
+            <div class="d-lg-flex align-items-center mb-4 gap-3">
+									<h3>Orders</h3>
+              <div class="position-relative">
+                <input type="text" class="form-control ps-5 radius-30" placeholder="Search Order"> <span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
+              </div>
+
+            </div>
+            <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+              <table class="table mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Order Id</th>
+                    <th>Senders Name</th>
+                    <th>Senders Phone No</th>
+                    <th>Senders Address</th>
+                    <th>Receivers Address</th>
+                    <th>Pickup Center</th>
+                    <th>
+                      Amount
+                    </th>
+                    <th>Status</th>
+                    <th>
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>FulFilled</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Confirmed</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Partially shipped</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>FulFilled</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Confirmed</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Partially shipped</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>FulFilled</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Confirmed</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Partially shipped</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>FulFilled</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Confirmed</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Partially shipped</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>FulFilled</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Confirmed</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Partially shipped</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>FulFilled</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Confirmed</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Partially shipped</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class='bx bxs-circle me-1'></i>FulFilled</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Confirmed</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div>
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+                        </div>
+                        <div class="ms-2">
+                          <h6 class="mb-0 font-14">#OS-000354</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Gaspur Antunes</td>
+                    <td>080271577858</td>
+                    <td>5 Bola Road</td>
+                    <td>5 Bola Road</td>
+                    <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+                    <td>
+                      #10000
+                    </td>
+                      <td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3"><i class='bx bxs-circle align-middle me-1'></i>Partially shipped</div></td>
+                    <td>
+                      <div class="d-flex order-actions">
+                        <a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+                        <a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!--end breadcrumb-->
+
+        <div class="card">
+          <div class="card-body">
+            <div class="d-lg-flex align-items-center mb-4 gap-3">
+								<h3>Riders</h3>
+              <div class="position-relative">
+                <input type="text" class="form-control ps-5 radius-30" placeholder="Search Order"> <span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
+              </div>
+
+            </div>
+            <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+              <table class="table mb-0">
+								<thead class="table-light">
+									<tr>
+										<th>Rider Id</th>
+										<th>Riders Name</th>
+										<th>Riders Phone No</th>
+										<th>Assigned Orders</th>
+										<th>Pending Orders</th>
+										<th>Completed Orders</th>
+
+
+										<th>
+											Actions
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div>
+													<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+												</div>
+												<div class="ms-2">
+													<h6 class="mb-0 font-14">#OS-000354</h6>
+												</div>
+											</div>
+										</td>
+										<td>Gaspur Antunes</td>
+										<td>080271577858</td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+								 <td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+										<td><button type="button" class="btn btn-dark btn-sm radius-10 px-4">View Details</button></td>
+
+										<td>
+											<div class="d-flex order-actions">
+												<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+												<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+											</div>
+										</td>
+									</tr>
+
+
+
+
+
+								</tbody>
+								</table>
+            </div>
+
+          </div>
+
+        </div>
+				<div class="card">
+								<div class="card-body">
+									<div class="d-lg-flex align-items-center mb-4 gap-3">
+	<h3>Vehicles</h3>
+										<div class="position-relative">
+											<input type="text" class="form-control ps-5 radius-30" placeholder="Search Rider"> <span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
+										</div>
+									</div>
+									<div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+										<table class="table mb-0">
+											<thead class="table-light">
+												<tr>
+													<th>Rider Id</th>
+													<th>Rider's Name</th>
+													<th>Rider's Phone No</th>
+													<th>Vehicle Plate No</th>
+			                      					<th>Vehicle Type</th>
+			                                          <th>
+														Actions
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+			                                    <tr>
+													<td>
+														<div class="d-flex align-items-center">
+															<div>
+																<input class="form-check-input me-3" type="checkbox" value="" aria-label="...">
+															</div>
+															<div class="ms-2">
+																<h6 class="mb-0 font-14">#OS-000354</h6>
+															</div>
+														</div>
+													</td>
+													<td>Gaspur Antunes</td>
+													<td>080271577858</td>
+													<td>5 Bola Road</td>
+													<td>Bus</td>
+			                                        <td>
+														<div class="d-flex order-actions">
+															<a href="javascript:;" class=""><i class='bx bxs-edit'></i></a>
+															<a href="javascript:;" class="ms-3"><i class='bx bxs-trash'></i></a>
+														</div>
+													</td>
+
+												</tr>
+
+
+
+
+
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+      </div>
+    </div>
+    <!--end page wrapper -->
+    <!--start overlay-->
+    <div class="overlay toggle-icon"></div>
+    <!--end overlay-->
+    <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+    <!--End Back To Top Button-->
+    <footer class="page-footer">
+      <p class="mb-0">Copyright © 2021. All right reserved.</p>
+    </footer>
+  </div>
+  <!--end wrapper-->
+	<!--start switcher-->
+	<div class="switcher-wrapper">
+		<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<div class="d-flex align-items-center">
+				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+			</div>
+			<hr/>
+			<h6 class="mb-0">Theme Styles</h6>
+			<hr/>
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
+					<label class="form-check-label" for="lightmode">Semi Dark</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
+					<label class="form-check-label" for="darkmode">Dark</label>
+				</div>
+
+			</div>
+			<hr/>
+
+
+			<h6 class="mb-0">Header Colors</h6>
+			<hr/>
+			<div class="header-colors-indigators">
+				<div class="row row-cols-auto g-3">
+					<div class="col">
+						<div class="indigator headercolor1" id="headercolor1"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor2" id="headercolor2"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor3" id="headercolor3"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor4" id="headercolor4"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor5" id="headercolor5"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor6" id="headercolor6"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor7" id="headercolor7"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor8" id="headercolor8"></div>
+					</div>
+				</div>
+			</div>
+			<hr/>
+			<h6 class="mb-0">Sidebar Colors</h6>
+			<hr/>
+			<div class="header-colors-indigators">
+				<div class="row row-cols-auto g-3">
+					<div class="col">
+						<div class="indigator sidebarcolor1" id="sidebarcolor1"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor2" id="sidebarcolor2"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor3" id="sidebarcolor3"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor4" id="sidebarcolor4"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor5" id="sidebarcolor5"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor6" id="sidebarcolor6"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor7" id="sidebarcolor7"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor8" id="sidebarcolor8"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end switcher-->
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--plugins-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+  <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+  <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <!--app JS-->
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
